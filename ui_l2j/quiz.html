@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>Enhanced Quiz Application</title>
+    <link rel="stylesheet" href="/quiz-enhanced.css">
+
+    <script id="MathJax-script" async src="MathJax-master/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-controls">
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-header">
+                <button id="filter-toggle" aria-expanded="false" class="btn filter-toggle" title="Toggle Filters">
+                    <span class="filter-arrow">▸</span><span class="filter-label"> Filters</span>
+                </button>
+            </div>
+            <div class="filter-body">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="subject-filter">Subject:</label>
+                        <select id="subject-filter">
+                            <option value="">All Subjects</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="division-filter">Division:</label>
+                        <select id="division-filter">
+                            <option value="">All Divisions</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="chapter-filter">Chapter:</label>
+                        <select id="chapter-filter">
+                            <option value="">All Chapters</option>
+                        </select>
+                    </div>
+                    <div class="filter-actions">
+                        <button id="apply-filter-btn" class="btn filter-btn">Apply Filter</button>
+                        <button id="reset-filter-btn" class="btn reset-btn">Reset Filter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-info">
+                <span id="progress-text">No questions loaded</span>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+            <div class="main-area">
+                <div class="question-overview" id="question-overview" style="display: none;">
+                    <h3>Question Overview</h3>
+                    <div id="question-grid" class="question-grid"></div>
+                </div>
+
+                <div id="quiz-container" class="quiz-container" style="display: none;">
+                    <div class="question-navigation">
+                        <button id="prev-question" class="btn nav-btn">← Previous</button>
+                        <span id="question-counter">Question 1 of 1</span>
+                        <button id="next-question" class="btn nav-btn">Next →</button>
+                    </div>
+
+                    <div class="question-section">
+                        <div id="comprehension-content" class="comprehension-content" style="display: none;"></div>
+                        <div id="direction-content" class="direction-content" style="display: none;"></div>
+                        <div id="question-content" class="question-content"></div>
+                    </div>
+
+                    <div class="options-section">
+                        <div id="options-container" class="options-container"></div>
+                    </div>
+
+                    <div class="controls">
+                        <button id="submit-btn" class="btn submit-btn">Submit Answer</button>
+                        <button id="show-explanation-btn" class="btn explanation-btn" style="display: none;">Show Explanation</button>
+                        <button id="mark-for-review" class="btn review-btn">Mark for Review</button>
+                    </div>
+
+                    <div id="result" class="result" style="display: none;"></div>
+                    <div id="explanation" class="explanation" style="display: none;"></div>
+                </div>
+
+                <div id="no-quiz" class="no-quiz">
+                    <p>Please select filters and apply to load questions.</p>
+                </div>
+            </div>
+    </div>
+
+    <script src="/quiz-enhanced.js"></script>
+</body>
+</html>
