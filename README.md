@@ -11,7 +11,7 @@ create an app?
 
 maybe train ai with the questions and answer ?
 
-the scraped data is insane , has more statistical like weightage per year , topics wise segregation , ettc etc . so u could this in some way ?
+the scraped data is insane , has more statistical like data weightage per year , topics wise segregation , ettc etc . so u could this in some way ?
 
 
 
